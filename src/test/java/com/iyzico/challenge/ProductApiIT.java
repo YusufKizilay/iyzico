@@ -20,6 +20,7 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.*;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -37,6 +38,7 @@ import static org.mockito.Mockito.verify;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Import(ProductApiIT.TestConfig.class)
+@EnableAsync
 public class ProductApiIT {
 
     private static final String HOST = "http://localhost:";
