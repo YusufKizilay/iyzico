@@ -1,0 +1,1 @@
+insert into PRODUCT values (1, 'desc', 'name', 10, 3);
